@@ -11,7 +11,7 @@ import backG from "../assets/Logo.jpg";
 import { NavLink } from "react-router-dom";
 import  DarkModeToggle from "./Darkmodetoggle";
 import Dropdown from "./Dropdownhover";
-import "./Home.css";
+import "../components/Home.css";
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false); // Toggle for mobile menu
@@ -39,11 +39,11 @@ function Home() {
        <div className="home-mod">
         {/* Header Section */}
     
-        <div className="flex items-center justify-between h-[150px] px-4 sm:px-6 md:px-8 bg-gradient-to-t from-blue-600 to-black">
+        <div className="flex  rounded-3xl mx-auto  mt-6 items-center justify-between h-[150px]  md:px-12 bg-blue-800">
           <img
             src={backG}
             alt="logo"
-            className="w-[80px] sm:w-[100px] bg-gradient-to-t from-blue-600 via-white to-black"
+            className="w-[80px] sm:w-[120px] "
           />
 
           {/* Hamburger Menu Button for Mobile */}
@@ -69,7 +69,7 @@ function Home() {
 
           {/* Desktop Menu */}
           <div
-            className="mx-auto space-x-4 text-red-50"
+            className="mx-auto space-x-4 "
             style={{ fontFamily: "" }}
           />
           
