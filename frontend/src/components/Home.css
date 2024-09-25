@@ -1,0 +1,38 @@
+/* Home.css */
+
+/* Background Styling */
+/* .home-mod {
+  background: url('../assets/bg.jpg') no-repeat center center fixed; Replace with your image
+  background-size: cover;
+  position: relative;
+  color: white;
+  min-height: 100vh;
+  overflow: hidden;
+  
+} */
+
+.card-wrapper {
+  perspective: 1000px; /* Enable 3D space for children */
+}
+
+.card-wrapper:hover .card {
+  transform: rotateY(10deg) scale(1.05); /* Rotate and scale the card */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.card {
+  transition: transform 0.3s ease-in-out; /* Smooth transition for initial state */
+  /* Add other styles for your Card component here */
+}
+
+/* AOS Animation Effects */
+[data-aos="fade-right"],
+[data-aos="fade-left"] {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+[data-aos="fade-right"].aos-animate,
+[data-aos="fade-left"].aos-animate {
+  opacity: 1;
+}

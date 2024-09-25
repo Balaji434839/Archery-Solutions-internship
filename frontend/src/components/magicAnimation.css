@@ -1,0 +1,217 @@
+/* magicAnimation.css */
+
+/* Background Particles */
+.particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 60, 255); /* Light Blue Particle */
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.6;
+    animation: float 8s ease-in-out infinite;
+    transition: transform 0.2s ease-out;
+  }
+  
+  .particle1 {
+    top: 10%;
+    left: 15%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 90, 255, 0.5);
+  }
+  
+  .particle2 {
+    top: 50%;
+    left: 75%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 162, 255, 0.7);
+  }
+  
+  .particle3 {
+    top: 85%;
+    left: 45%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 162, 255, 0.5);
+  }
+  
+  .particle4 {
+    top: 20%;
+    left: 60%;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 162, 255, 0.6);
+  }
+  
+  .particle5 {
+    top: 75%;
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 162, 255, 0.4);
+  }
+  
+  .particle6 {
+    top: 30%;
+    left: 80%;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 162, 255, 0.7);
+  }
+  
+  .particle7 {
+    top: 60%;
+    left: 40%;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 162, 255, 0.5);
+  }
+  
+  .particle8 {
+    top: 40%;
+    left: 10%;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 162, 255, 0.3);
+  }
+  
+  /* Glass Effect Styling */
+  .glass-effect {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    backdrop-filter: blur(15px); /* Increase blur intensity */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .glass-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bgi.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1; /* Adjust the opacity of the broken glass image */
+    pointer-events: none; /* Ensure it does not interfere with UI interactions */
+    z-index: -1;
+  }
+  
+  /* Optional: Add blur to specific inner elements if needed */
+  .glass-content {
+    backdrop-filter: blur(100px); /* Apply additional blur if necessary */
+  }
+  /* Hover Effects for Product Card */
+.glass-effect {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    backdrop-filter: blur(15px); /* Increase blur intensity */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .glass-effect:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Product Image Hover Effects */
+  .product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: translateY(-10px); /* Lift the product card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Button Hover Effects */
+  button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade of blue */
+    transform: scale(1.1); /* Slightly enlarge the button */
+  }
+  
+  /* Quantity Buttons Hover Effects */
+  .quantity button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .quantity button:hover {
+    background-color: #003d7a; /* Darker blue */
+    transform: scale(1.2); /* Enlarge the button on hover */
+  }
+  
+  /* Apply Discount Button Hover Effects */
+  button:hover {
+    background-color: #0080ff; /* Darker blue for Apply button */
+    transform: scale(1.1); /* Enlarge on hover */
+  }
+  
+  /* Checkout Button Hover Effects */
+  button:hover {
+    background-color: #067ef7; /* Darker blue */
+    transform: scale(1.1); /* Enlarge on hover */
+  }
+  
+  /* Interactive Particle Animation */
+  .particle {
+    transition: transform 0.3s ease;
+  }
+  
+  .particle:hover {
+    transform: scale(1.2); /* Enlarge particles on hover */
+  }
+  /* Styles for Check out Cart section */
+.checkout-cart-title {
+    font-family: 'Roboto', sans-serif; /* Change to your desired font family */
+    font-size: 1.5rem; /* Adjust font size */
+    color: #2d2d2d; /* Darker text color */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Adjust letter spacing */
+  }
+  
+  /* Styles for Apply Discount section */
+  .apply-discount-label {
+    font-family: 'Arial', sans-serif; /* Change to your desired font family */
+    font-size: 0.875rem; /* Adjust font size */
+    color: #555555; /* Grayish text color */
+    font-weight: bold; /* Bold text */
+  }
+  
+  /* Styles for Apply button */
+  .apply-discount-button {
+    font-family: 'Arial', sans-serif; /* Change to your desired font family */
+    font-size: 1rem; /* Adjust font size */
+    color: #ffffff; /* White text color */
+    background-color: #007bff; /* Button background color */
+  }
+  
+  /* Styles for Checkout section */
+  .checkout-label {
+    font-family: 'Roboto', sans-serif; /* Change to your desired font family */
+    font-size: 0.875rem; /* Adjust font size */
+    color: #2d2d2d; /* Darker text color */
+    font-weight: bold; /* Bold text */
+  }
+  
+  /* Styles for Checkout button */
+  .checkout-button {
+    font-family: 'Roboto', sans-serif; /* Change to your desired font family */
+    font-size: 1rem; /* Adjust font size */
+    color: #ffffff; /* White text color */
+    background-color: #28a745; /* Green background color */
+  }
+  
