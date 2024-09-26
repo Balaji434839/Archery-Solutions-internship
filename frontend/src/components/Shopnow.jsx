@@ -117,12 +117,12 @@ function Shopnow() {
         <Modal 
           isOpen={isModalOpen} 
           onRequestClose={() => setIsModalOpen(false)} 
-          className="w-full max-w-md p-6 mx-auto transition-all duration-300 transform scale-100 bg-white rounded-lg shadow-lg opacity-100"
+          className="w-full max-w-md p-6 mx-auto transition-all duration-300 transform scale-100 bg-black rounded-lg shadow-lg opacity-100"
           overlayClassName="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
         >
           <h2 className="text-2xl font-bold">Your Cart</h2>
           {cart.length === 0 ? (
-            <p className="text-gray-500">Your cart is empty.</p>
+            <p className="text-gray-200">Your cart is empty.</p>
           ) : (
             <div>
               {cart.map((item) => (
@@ -131,9 +131,9 @@ function Shopnow() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="items-center justify-between p-4 my-2 transition-all duration-300 bg-white border rounded-lg shadow-lg cart-item"
+                  className="items-center justify-between p-4 my-2 transition-all duration-300 bg-white border rounded-lg shadow-lg scroll-auto cart-item"
                 >
-                  <img src={item.image} alt={item.name} className="object-cover w-16 h-16 rounded-lg" />
+                  <img src={item.image} alt={item.name} className="object-cover w-24 h-16 rounded-lg" />
                   <div>
                     <h3 className="text-lg font-semibold">{item.name}</h3>
                     <p>Price: ${item.price}</p>
