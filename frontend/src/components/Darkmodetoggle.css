@@ -1,9 +1,6 @@
 /* Base styles for the switch */
 .dark-mode-toggle {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
   }
   
   .switch {

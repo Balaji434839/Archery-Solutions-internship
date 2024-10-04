@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import './magicAnimation.css'; // Import the CSS file for animations and styles
@@ -65,10 +66,9 @@ function Productcard() {
                 ></path>
               </svg>
               <div>
-                <span>Cheese Burger</span>
-                <p>Extra Spicy</p>
-                <p>No mayo</p>
-              </div>
+             <span> Garmin Fenix 6 Pro</span>
+             <p>price </p>
+            </div>
               <div className="flex items-center space-x-2 quantity">
                 <button className="p-1 hover:bg-blue-900 hover:text-white transition-all duration-300 rounded-full transform hover:scale-110">
                   <svg
@@ -87,7 +87,7 @@ function Productcard() {
                     ></path>
                   </svg>
                 </button>
-                <label className="text-lg">2</label>
+                <label className="text-lg">1</label>
                 <button className="p-1 hover:bg-blue-900 hover:text-white transition-all duration-300 rounded-full transform hover:scale-110">
                   <svg
                     fill="none"

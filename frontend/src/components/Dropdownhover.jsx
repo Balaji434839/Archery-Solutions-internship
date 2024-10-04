@@ -23,7 +23,7 @@ function Dropdown ()  {
       <button
         id="dropdownDelayButton"
         type="button"
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        className="text-blue bg-blue-100 hover:bg-blue-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -58,7 +58,7 @@ function Dropdown ()  {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-               <NavLink to="./dashboard" className="no-underline">Dashboard</NavLink>
+               <NavLink to="/dashboard" className="no-underline">Dashboard</NavLink>
               </a>
             </li>
             <li>

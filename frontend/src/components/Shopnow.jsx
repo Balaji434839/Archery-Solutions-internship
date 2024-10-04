@@ -117,7 +117,7 @@ function Shopnow() {
         <Modal 
           isOpen={isModalOpen} 
           onRequestClose={() => setIsModalOpen(false)} 
-          className="w-full max-w-md p-6 mx-auto transition-all duration-300 transform scale-100 bg-black rounded-lg shadow-lg opacity-100"
+          className="w-full max-w-md p-6 mx-auto text-black transition-all duration-300 transform scale-100 bg-black rounded-lg shadow-lg opacity-100"
           overlayClassName="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
         >
           <h2 className="text-2xl font-bold">Your Cart</h2>

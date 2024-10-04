@@ -134,3 +134,25 @@ export async function Updatequantity(req, res) {
     return res.status(500).json({ message: 'Server error', success: false });
   }
 }
+
+const getUser = () => {
+  fetch("/api/v1/userLogin", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username: "user1", // This would come from a form or state in your real app
+      password: "pass1",
+    }),
+  })
+    .then(res => res.json())
+    .then(json => {
+      if (json.status === "success") {
+        console.log("User logged in successfully:", json.userId);
+      } else {
+        console.log("Login failed:", json.message);
+      }
+    })
+    .catch(err => console.error("Error during login:", err));
+};

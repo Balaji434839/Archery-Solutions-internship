@@ -1,40 +1,43 @@
-// index.js
-import express from 'express';
-import { config } from 'dotenv';
-import cors from 'cors';
-import LoginDB from './src/db/index.js';
-import LoginRoutes from './src/routes/Login.Routes.js';
+import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
 
-
-
-config(); // Load environment variables
 const app = express();
-const PORT = process.env.PORT || 2000;
+const PORT = 5000;
 
 // Middleware
-app.use(express.json());
 app.use(cors());
+app.use(bodyParser.json());
 
-// MongoDB Connection
-const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/joho';
+// Example user data (for login simulation)
+const users = [
+  { id: 1, username: "user1", password: "pass1" },
+  { id: 2, username: "user2", password: "pass2" },
+];
 
-// Login Route
+// Example product data (for the product cards)
+const products = [
+  { id: 1, name: "Apple Watch Series 7 GPS", price: 599 },
+  { id: 2, name: "Samsung Galaxy Watch 4", price: 399 },
+  { id: 3, name: "Garmin Fenix 6 Pro", price: 699 },
+];
 
-app.use('/api/v1/userUpdatequantity',LoginRoutes)
-app.use('/api/v1/userRemovefromcart',LoginRoutes)
-app.use('/api/v1/userAddtocart',LoginRoutes)
-app.use('/api/v1/userProductcard',LoginRoutes)
-app.use('/api/v1/userSignout',LoginRoutes)
-app.use('/api/v1/userSignup' ,LoginRoutes)
-app.use('/api/v1/userLogin' ,LoginRoutes )
+// API Routes
+app.get("/api/v1/userLogin", (req, res) => {
+  res.json(user);
+});
 
+app.post("/api/v1/userLogin", (req, res) => {
+  const { username, password } = req.body;
+  const user = users.find(u => u.username === username && u.password === password);
 
-// Start Express Server
+  if (user) {
+    res.json({ status: "success", userId: user.id });
+  } else {
+    res.status(401).json({ status: "error", message: "Invalid credentials" });
+  }
+});
 
-LoginDB(mongoURI).then(()=>{
-  app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-  });
-}).catch(()=>{
-  console.log("Error in connecting");
-})
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});

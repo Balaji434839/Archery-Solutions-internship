@@ -36,7 +36,7 @@ function Carousel  () {
   return (
     <div id="default-carousel" className="" data-carousel="slide">
       {/* Carousel wrapper */}
-      <div className="items-center w-auto h-screen mx-auto rounded-3xl contain-content ">
+      <div className="items-center w-auto h-screen mx-auto contain-content ">
         {slides.map((slide, index) => (
           <div
             key={index}
